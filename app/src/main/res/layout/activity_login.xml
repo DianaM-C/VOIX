@@ -99,4 +99,12 @@
         app:layout_constraintStart_toStartOf="@+id/username"
         tools:layout_editor_absoluteY="294dp" />
 
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACTUALIZAR CONTRASEÑA"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="576dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
