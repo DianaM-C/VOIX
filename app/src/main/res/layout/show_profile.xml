@@ -224,7 +224,7 @@
         android:src="@drawable/baseline_email_24" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editTextEmailAddress"
         android:layout_width="137dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="253dp"
@@ -284,7 +284,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         android:layout_height="23dp"
         android:layout_marginStart="330dp"
         android:layout_marginTop="128dp"
-        android:backgroundTin="#57D2F0"
+        android:backgroundTint="#57D2F0"
         android:src="@drawable/lapiz" />
 
 </FrameLayout>
