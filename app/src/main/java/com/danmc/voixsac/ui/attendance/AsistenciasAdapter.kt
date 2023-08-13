@@ -71,8 +71,8 @@ class AsistenciasAdapter : RecyclerView.Adapter<AsistenciasAdapter.AsistenciasVi
             tvEstado =itemView.findViewById(R.id.tv_estado)
             tvDni =itemView.findViewById(R.id.tv_dni)
 
-            tvFecha?.text = dt()
-            tvHora?.text = tm()
+            tvFecha?.text = data.fecha
+            tvHora?.text = data.hora
             tvUbicacion?.text = data.ubicacion
             tvEstado?.text = data.estado
             tvDni?.text = data.dni
