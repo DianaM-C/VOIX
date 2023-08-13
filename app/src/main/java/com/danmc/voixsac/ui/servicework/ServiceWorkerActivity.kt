@@ -80,7 +80,7 @@ class ServiceWorkerActivity : AppCompatActivity() {
         val rol = binding.edRol.text.toString()
         val trabajadores = Trabajadores(nombre=nombre, apellido = apellido, correo = correo, contrasena = contrasena, dni = dni, rol = rol)
 
-        databaseReference?.child(getRandomString(2))?.setValue(trabajadores)
+        databaseReference?.child(getRandomString(3))?.setValue(trabajadores)
     }
 
 
