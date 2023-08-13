@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:name="com.danmc.voixsac.ui.servicework.ServiceWorkerFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    app:layoutManager="LinearLayoutManager"
-    tools:context=".ui.servicework.ServiceWorkerFragment">
+    tools:context=".ui.servicework.ServiceWorkerActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -25,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:orientation="vertical"
-        android:paddingTop="40dp">
+        android:paddingTop="10dp">
 
         <EditText
             android:id="@+id/ed_nombre"
@@ -91,13 +86,5 @@
             android:layout_height="match_parent"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        app:layout_anchor="@+id/linearLayoutCompat"
-        app:layout_anchorGravity="top|center"
-        app:popupTheme="@style/Theme.VOIXSAC.PopupOverlay" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

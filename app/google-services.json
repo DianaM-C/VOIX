@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "679746486735",
+    "project_id": "voix-crud",
+    "storage_bucket": "voix-crud.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679746486735:android:94b78a1424d7ee6c4052ba",
+        "android_client_info": {
+          "package_name": "com.danmc.voixsac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "679746486735-rr1m1cd8ptqbrvv0s5i7ra53if4gcstg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRf2p98pElkSXZXs3tu-JmjEzAiihgmVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "679746486735-rr1m1cd8ptqbrvv0s5i7ra53if4gcstg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

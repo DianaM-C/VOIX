@@ -11,11 +11,11 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
+    <activity
         android:id="@+id/nav_gallery"
-        android:name="com.danmc.voixsac.ui.gallery.GalleryFragment"
+        android:name="com.danmc.voixsac.ui.gallery.GalleryActivity"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/activity_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
@@ -29,11 +29,11 @@
         android:label="@string/menu_services"
         tools:layout="@layout/fragment_services" />
 
-    <fragment
+    <activity
         android:id="@+id/nav_workers_list"
-        android:name="com.danmc.voixsac.ui.servicework.ServiceWorkerFragment"
+        android:name="com.danmc.voixsac.ui.servicework.ServiceWorkerActivity"
         android:label="@string/menu_workers_adm"
-        tools:layout="@layout/fragment_service_work_list" />
+        tools:layout="@layout/activity_service_work_list" />
 
     <fragment
         android:id="@+id/nav_services_list"
