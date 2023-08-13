@@ -29,6 +29,10 @@
             android:icon="@drawable/worker"
             android:title="@string/menu_workers_adm" />
         <item
+            android:id="@+id/nav_attendance_list"
+            android:icon="@drawable/worker"
+            android:title="@string/menu_attendance" />
+        <item
             android:id="@+id/nav_services_list"
             android:icon="@drawable/worker"
             android:title="@string/title_activity_mark_attendance" />

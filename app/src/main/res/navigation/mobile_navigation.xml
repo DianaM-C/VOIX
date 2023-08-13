@@ -17,12 +17,6 @@
         android:label="@string/menu_gallery"
         tools:layout="@layout/activity_gallery" />
 
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.danmc.voixsac.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
     <activity
         android:id="@+id/nav_services"
         android:name="com.danmc.voixsac.ui.service.ServiceActivity"
@@ -35,9 +29,15 @@
         android:label="@string/menu_workers_adm"
         tools:layout="@layout/activity_service_work_list" />
 
+    <activity
+        android:id="@+id/nav_attendance_list"
+        android:name="com.danmc.voixsac.ui.attendance.AttendanceWorkerActivity"
+        android:label="@string/menu_workers_adm"
+        tools:layout="@layout/activity_attendance_work_list" />
+
     <fragment
         android:id="@+id/nav_services_list"
-        android:name="com.danmc.voixsac.ui.servicework.ServiceWorkerFragment"
+        android:name="com.danmc.voixsac.ui.service.ServiceActivity"
         android:label="@string/menu_services_adm"
         tools:layout="@layout/fragment_services_adm" />
 

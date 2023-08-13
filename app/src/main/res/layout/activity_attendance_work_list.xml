@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.servicework.ServiceWorkerActivity">
+    tools:context=".ui.attendance.AttendanceWorkerActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -15,7 +15,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linearLayoutCompat"
+        android:id="@+id/linearLayoutCompatAtt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
@@ -23,16 +23,28 @@
         android:paddingTop="10dp">
 
         <EditText
-            android:id="@+id/ed_nombre"
+            android:id="@+id/ed_fecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nombre" />
+            android:hint="Fecha" />
 
         <EditText
-            android:id="@+id/ed_apellido"
+            android:id="@+id/ed_hora"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Apellido" />
+            android:hint="Hora" />
+
+        <EditText
+            android:id="@+id/ed_ubicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ubicación" />
+
+        <EditText
+            android:id="@+id/ed_estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Estado" />
 
         <EditText
             android:id="@+id/ed_dni"
@@ -40,23 +52,6 @@
             android:layout_height="wrap_content"
             android:hint="DNI" />
 
-        <EditText
-            android:id="@+id/ed_correo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Correo" />
-
-        <EditText
-            android:id="@+id/ed_contrasena"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Contraseña" />
-
-        <EditText
-            android:id="@+id/ed_rol"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Rol" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"

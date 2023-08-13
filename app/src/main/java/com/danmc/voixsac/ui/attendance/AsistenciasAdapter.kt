@@ -7,26 +7,29 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.danmc.voixsac.R
+import com.danmc.voixsac.databinding.AsistenciassItemHolderBinding
+import java.text.SimpleDateFormat
+import java.util.Date
 
-class AsistenciasAdapter : RecyclerView.Adapter<AsistenciasAdapter.TrabajadoresViewHolder>(){
-    private var trabajadoresList = mutableListOf<Asistencias>()
+class AsistenciasAdapter : RecyclerView.Adapter<AsistenciasAdapter.AsistenciasViewHolder>(){
+    private var asistenciasList = mutableListOf<Asistencias>()
     private var onClickView:((Asistencias)->Unit)? = null
     private var onClickDelete:((Asistencias)->Unit)?=null
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrabajadoresViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AsistenciasViewHolder {
         val context = parent.context
         val inflater = LayoutInflater.from(context)
-        val itemView = inflater.inflate(R.layout.trabajadores_item_holder,parent,false)
-        return  TrabajadoresViewHolder(itemView)
+        val itemView = inflater.inflate(R.layout.asistenciass_item_holder,parent,false)
+        return  AsistenciasViewHolder(itemView)
     }
 
     override fun getItemCount(): Int {
-        return trabajadoresList.size
+        return asistenciasList.size
     }
 
-    override fun onBindViewHolder(holder: TrabajadoresViewHolder, position: Int) {
-        val trabajadores = trabajadoresList[position]
-        holder.setItem(trabajadores)
+    override fun onBindViewHolder(holder: AsistenciasViewHolder, position: Int) {
+        val asistencias = asistenciasList[position]
+        holder.setItem(asistencias)
         holder.setOnClickView {
             onClickView?.invoke(it)
         }
@@ -36,48 +39,43 @@ class AsistenciasAdapter : RecyclerView.Adapter<AsistenciasAdapter.TrabajadoresV
     }
 
     fun setItems(list: MutableList<Asistencias>){
-        this.trabajadoresList = list
+        this.asistenciasList = list
         notifyDataSetChanged()
     }
 
-    fun setOnClickView(callback: (Trabajadores) -> Unit){
+    fun setOnClickView(callback: (Asistencias) -> Unit){
         this.onClickView = callback
     }
 
-    fun setOnClickDelete(callback: (Trabajadores) -> Unit){
+    fun setOnClickDelete(callback: (Asistencias) -> Unit){
         this.onClickDelete = callback
     }
 
 
-    class TrabajadoresViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        private var tvNombre: TextView? = null
-        private var tvApellido: TextView? = null
-        private var tvCorreo: TextView? = null
-        private var tvContrasena: TextView? = null
+    class AsistenciasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        private var tvFecha: TextView? = null
+        private var tvHora: TextView? = null
+        private var tvUbicacion: TextView? = null
+        private var tvEstado: TextView? = null
         private var tvDni: TextView? = null
-        private var tvRol: TextView? = null
         private var actionView: ImageView? = null
         private var actionDelete: ImageView? = null
 
-        private var onClickView: ((Trabajadores) -> Unit)?= null
-        private var onClickDelete: ((Trabajadores) -> Unit)?= null
+        private var onClickView: ((Asistencias) -> Unit)?= null
+        private var onClickDelete: ((Asistencias) -> Unit)?= null
 
-        fun setItem(data : Trabajadores){
-            tvNombre =itemView.findViewById(R.id.tv_nombre)
-            tvApellido =itemView.findViewById(R.id.tv_apellido)
-            tvCorreo =itemView.findViewById(R.id.tv_correo)
-            tvContrasena =itemView.findViewById(R.id.tv_contrasena)
+        fun setItem(data : Asistencias){
+            tvFecha =itemView.findViewById(R.id.tv_fecha)
+            tvHora =itemView.findViewById(R.id.tv_hora)
+            tvUbicacion =itemView.findViewById(R.id.tv_ubicacion)
+            tvEstado =itemView.findViewById(R.id.tv_estado)
             tvDni =itemView.findViewById(R.id.tv_dni)
-            tvRol =itemView.findViewById(R.id.tv_rol)
-            actionView =itemView.findViewById(R.id.ic_view)
-            actionDelete = itemView.findViewById(R.id.ic_delete)
 
-            tvNombre?.text = data.nombre
-            tvApellido?.text = data.apellido
-            tvCorreo?.text = data.correo
-            tvContrasena?.text = data.contrasena
+            tvFecha?.text = dt()
+            tvHora?.text = tm()
+            tvUbicacion?.text = data.ubicacion
+            tvEstado?.text = data.estado
             tvDni?.text = data.dni
-            tvRol?.text = data.rol
 
             actionView?.setOnClickListener{
                 onClickView?.invoke(data)
@@ -87,12 +85,23 @@ class AsistenciasAdapter : RecyclerView.Adapter<AsistenciasAdapter.TrabajadoresV
                 onClickDelete?.invoke(data)
             }
         }
-        fun setOnClickView(callback: (Trabajadores)->Unit){
+        fun setOnClickView(callback: (Asistencias)->Unit){
             this.onClickView = callback
         }
 
-        fun setOnClickDelete(callback: (Trabajadores) -> Unit){
+        fun setOnClickDelete(callback: (Asistencias) -> Unit){
             this.onClickDelete = callback
         }
+    }
+    fun dt(): String {
+        val dateFormat = SimpleDateFormat("d MMM yyyy")
+        val date = dateFormat.format(Date())
+        return date
+    }
+
+    fun tm(): String {
+        val timeFormat = SimpleDateFormat("HH:mm:ss z")
+        val time = timeFormat.format(Date())
+        return time
     }
 }
