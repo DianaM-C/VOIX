@@ -23,11 +23,11 @@
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 
-    <fragment
+    <activity
         android:id="@+id/nav_services"
-        android:name="com.danmc.voixsac.ui.service.ServiceFragment"
+        android:name="com.danmc.voixsac.ui.service.ServiceActivity"
         android:label="@string/menu_services"
-        tools:layout="@layout/fragment_services" />
+        tools:layout="@layout/activity_service" />
 
     <activity
         android:id="@+id/nav_workers_list"
