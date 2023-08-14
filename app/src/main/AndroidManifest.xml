@@ -13,6 +13,17 @@
         android:theme="@style/Theme.VOIXSAC"
         tools:targetApi="31">
         <activity
+            android:name=".Login"
+            android:exported="true"
+            android:label="Login"
+            android:theme="@style/Theme.VOIXSAC">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ui.service.ServiceActivity"
             android:exported="false" />
         <activity
@@ -24,7 +35,8 @@
         <activity
             android:name=".ui.ui.login.LoginActivity"
             android:exported="false"
-            android:label="@string/title_activity_login" />
+            android:label="Login"
+            android:theme="@style/Theme.VOIXSAC"></activity>
         <activity
             android:name=".ui.attendance.MarkAttendance"
             android:exported="false"
@@ -34,13 +46,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.VOIXSAC.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.VOIXSAC.NoActionBar"></activity>
     </application>
 
 </manifest>
