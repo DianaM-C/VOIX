@@ -7,9 +7,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.danmc.voixsac.R
-import com.danmc.voixsac.databinding.AsistenciassItemHolderBinding
-import java.text.SimpleDateFormat
-import java.util.Date
 
 class AsistenciasAdapter : RecyclerView.Adapter<AsistenciasAdapter.AsistenciasViewHolder>(){
     private var asistenciasList = mutableListOf<Asistencias>()
@@ -55,9 +52,10 @@ class AsistenciasAdapter : RecyclerView.Adapter<AsistenciasAdapter.AsistenciasVi
     class AsistenciasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         private var tvFecha: TextView? = null
         private var tvHora: TextView? = null
-        private var tvUbicacion: TextView? = null
         private var tvEstado: TextView? = null
+        private var tvUbicacion: TextView? = null
         private var tvDni: TextView? = null
+
         private var actionView: ImageView? = null
         private var actionDelete: ImageView? = null
 
@@ -67,15 +65,19 @@ class AsistenciasAdapter : RecyclerView.Adapter<AsistenciasAdapter.AsistenciasVi
         fun setItem(data : Asistencias){
             tvFecha =itemView.findViewById(R.id.tv_fecha)
             tvHora =itemView.findViewById(R.id.tv_hora)
-            tvUbicacion =itemView.findViewById(R.id.tv_ubicacion)
-            tvEstado =itemView.findViewById(R.id.tv_estado)
+            tvUbicacion =itemView.findViewById(R.id.tv_estado)
+            tvEstado =itemView.findViewById(R.id.tv_ubicacion)
             tvDni =itemView.findViewById(R.id.tv_dni)
+
+            actionView =itemView.findViewById(R.id.ic_view)
+            actionDelete = itemView.findViewById(R.id.ic_delete)
 
             tvFecha?.text = data.fecha
             tvHora?.text = data.hora
-            tvUbicacion?.text = data.ubicacion
             tvEstado?.text = data.estado
+            tvUbicacion?.text = data.ubicacion
             tvDni?.text = data.dni
+
 
             actionView?.setOnClickListener{
                 onClickView?.invoke(data)
@@ -92,16 +94,5 @@ class AsistenciasAdapter : RecyclerView.Adapter<AsistenciasAdapter.AsistenciasVi
         fun setOnClickDelete(callback: (Asistencias) -> Unit){
             this.onClickDelete = callback
         }
-    }
-    fun dt(): String {
-        val dateFormat = SimpleDateFormat("d MMM yyyy")
-        val date = dateFormat.format(Date())
-        return date
-    }
-
-    fun tm(): String {
-        val timeFormat = SimpleDateFormat("HH:mm:ss z")
-        val time = timeFormat.format(Date())
-        return time
     }
 }
