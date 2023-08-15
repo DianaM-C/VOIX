@@ -52,8 +52,8 @@ class AsistenciasAdapter : RecyclerView.Adapter<AsistenciasAdapter.AsistenciasVi
     class AsistenciasViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         private var tvFecha: TextView? = null
         private var tvHora: TextView? = null
-        private var tvEstado: TextView? = null
         private var tvUbicacion: TextView? = null
+        private var tvEstado: TextView? = null
         private var tvDni: TextView? = null
 
         private var actionView: ImageView? = null
@@ -65,8 +65,8 @@ class AsistenciasAdapter : RecyclerView.Adapter<AsistenciasAdapter.AsistenciasVi
         fun setItem(data : Asistencias){
             tvFecha =itemView.findViewById(R.id.tv_fecha)
             tvHora =itemView.findViewById(R.id.tv_hora)
-            tvUbicacion =itemView.findViewById(R.id.tv_estado)
-            tvEstado =itemView.findViewById(R.id.tv_ubicacion)
+            tvUbicacion =itemView.findViewById(R.id.tv_ubicacion)
+            tvEstado =itemView.findViewById(R.id.tv_estado)
             tvDni =itemView.findViewById(R.id.tv_dni)
 
             actionView =itemView.findViewById(R.id.ic_view)
@@ -74,8 +74,8 @@ class AsistenciasAdapter : RecyclerView.Adapter<AsistenciasAdapter.AsistenciasVi
 
             tvFecha?.text = data.fecha
             tvHora?.text = data.hora
-            tvEstado?.text = data.estado
             tvUbicacion?.text = data.ubicacion
+            tvEstado?.text = data.estado
             tvDni?.text = data.dni
 
 

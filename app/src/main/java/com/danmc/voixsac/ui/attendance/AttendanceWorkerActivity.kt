@@ -30,7 +30,7 @@ class AttendanceWorkerActivity : AppCompatActivity() {
         initRecyclerView()
 
         firebaseDatabase = FirebaseDatabase.getInstance()
-        databaseReference = firebaseDatabase?.getReference("asistencias")
+        databaseReference = firebaseDatabase?.getReference("asistencia")
         getData()
 
         binding.btnSave.setOnClickListener{saveData()}
@@ -111,6 +111,7 @@ class AttendanceWorkerActivity : AppCompatActivity() {
     }
 }
 
+    //esta funcion sirve para crear una id aleatoria en firebase
     fun getRandomString(length:Int) : String{
         val allowedChars = ('A'..'Z')+('a'..'z')+('0'..'9')
         return (1..length)

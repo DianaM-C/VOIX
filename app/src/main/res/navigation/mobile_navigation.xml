@@ -32,7 +32,7 @@
     <activity
         android:id="@+id/nav_attendance_list"
         android:name="com.danmc.voixsac.ui.attendance.AttendanceWorkerActivity"
-        android:label="@string/menu_workers_adm"
+        android:label="@string/menu_attendance"
         tools:layout="@layout/activity_attendance_work_list" />
 
     <fragment
