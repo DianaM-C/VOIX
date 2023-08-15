@@ -5,6 +5,13 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
+    <activity
+        android:id="@+id/nav_login"
+        android:name="com.danmc.voixsac.ui.ui.login.LoginActivity"
+        android:label="Login"
+        tools:layout="@layout/activity_login2" />
+
+
     <fragment
         android:id="@+id/nav_home"
         android:name="com.danmc.voixsac.ui.home.HomeFragment"
