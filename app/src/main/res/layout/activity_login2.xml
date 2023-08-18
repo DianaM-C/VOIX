@@ -35,12 +35,12 @@
         android:layout_marginTop="76dp"
         android:text="Inicie sesión para continuar"
         android:textColor="#FDFDFD"
-        app:layout_constraintEnd_toEndOf="@+id/edtEmail"
-        app:layout_constraintStart_toStartOf="@+id/edtEmail"
+        app:layout_constraintEnd_toEndOf="@+id/tv_correo"
+        app:layout_constraintStart_toStartOf="@+id/tv_correo"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <EditText
-        android:id="@+id/edtEmail"
+        android:id="@+id/tv_correo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
@@ -67,7 +67,7 @@
         app:srcCompat="@drawable/employe" />
 
     <EditText
-        android:id="@+id/edtPassword"
+        android:id="@+id/tv_contrasena"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -82,7 +82,7 @@
         android:textColorHint="#F8F5F6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_correo" />
 
     <ProgressBar
         android:id="@+id/loading"
@@ -93,8 +93,8 @@
         android:layout_marginBottom="64dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/edtPassword"
-        app:layout_constraintStart_toStartOf="@+id/edtPassword"
+        app:layout_constraintEnd_toEndOf="@+id/tv_contrasena"
+        app:layout_constraintStart_toStartOf="@+id/tv_contrasena"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
 
@@ -107,6 +107,6 @@
         android:text="Iniciar Sesion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_contrasena" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

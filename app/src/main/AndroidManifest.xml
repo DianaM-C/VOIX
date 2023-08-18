@@ -24,24 +24,27 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.VOIXSAC.NoActionBar"></activity>
+        <activity
+            android:name=".ui.gallery.GalleryActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.service.ServiceActivity"
             android:exported="false" />
         <activity
             android:name=".ui.servicework.ServiceWorkerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.gallery.GalleryActivity"
-            android:exported="false" />
+            android:label="@string/menu_workers_adm"
+            android:exported="false"/>
+
         <activity
             android:name=".ui.attendance.MarkAttendance"
             android:exported="false"
             android:label="@string/title_activity_mark_attendance"
             android:theme="@style/Theme.VOIXSAC" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.VOIXSAC.NoActionBar"></activity>
+
     </application>
 
 </manifest>

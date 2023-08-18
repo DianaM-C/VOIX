@@ -20,8 +20,8 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login2)
         val btninicio: Button = findViewById(R.id.btnInicio)
-        val txtemail: TextView = findViewById(R.id.edtEmail)
-        val txtpass: TextView = findViewById(R.id.edtPassword)
+        val txtemail: TextView = findViewById(R.id.tv_correo)
+        val txtpass: TextView = findViewById(R.id.tv_contrasena)
         firebaseAuth = Firebase.auth
         btninicio.setOnClickListener()
         {
@@ -29,11 +29,11 @@ class Login : AppCompatActivity() {
         }
     }
 
-    private fun signIn(email: String, password: String) {
-        firebaseAuth.signInWithEmailAndPassword(email, password)
+    private fun signIn(correo: String, contrasena: String) {
+        firebaseAuth.signInWithEmailAndPassword(correo, contrasena)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    val user = firebaseAuth.currentUser
+                    firebaseAuth.currentUser
                     Toast.makeText(baseContext, "Autenticación Exitosa", Toast.LENGTH_SHORT).show()
                     //aqui vamos a ir a la segunda activity
                     val i = Intent(this, MainActivity::class.java)

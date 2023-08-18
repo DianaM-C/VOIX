@@ -33,5 +33,5 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="correo.corporativo@empresavoix.pe" />
+        android:text="@string/prompt_email" />
 </LinearLayout>
