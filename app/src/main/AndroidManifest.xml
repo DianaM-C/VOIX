@@ -15,7 +15,7 @@
         <activity
             android:name=".Login"
             android:exported="true"
-            android:label="Login"
+            android:label="@string/menu_login"
             android:theme="@style/Theme.VOIXSAC">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,11 +32,6 @@
         <activity
             android:name=".ui.gallery.GalleryActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.ui.login.LoginActivity"
-            android:exported="false"
-            android:label="Login"
-            android:theme="@style/Theme.VOIXSAC"></activity>
         <activity
             android:name=".ui.attendance.MarkAttendance"
             android:exported="false"

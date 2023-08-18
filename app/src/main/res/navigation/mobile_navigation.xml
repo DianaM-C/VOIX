@@ -7,8 +7,8 @@
 
     <activity
         android:id="@+id/nav_login"
-        android:name="com.danmc.voixsac.ui.ui.login.LoginActivity"
-        android:label="Login"
+        android:name="com.danmc.voixsac.Login"
+        android:label="@string/menu_login"
         tools:layout="@layout/activity_login2" />
 
 
